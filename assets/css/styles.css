@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+nav {
+  height: 52px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+.gallery {
+  width: 95%;
+  max-width: 1250px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 2em;
+  margin: 0 auto;
+}
+
+figure {
+  position: relative;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+figure figcaption {
+  position: absolute;
+  top: 80%;
+  bottom: 1em;
+  right: 1em;
+  left: 1em;
+  background: rgba(112, 169, 161, 0.8);
+  color: #0b2027;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 300ms;
+}
+
+.gallery:hover img {
+  opacity: .6;
+  transition: opacity ease-in-out 300ms;
+}
+
+.rail-car:hover img {
+  opacity: 1;
+  transition: opacity ease-in-out 300ms;
+}
+
+.rail-car:hover figcaption {
+  opacity: 1;
+}
+
+.rail-car .name {
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
